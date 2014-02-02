@@ -13,6 +13,13 @@ class StringUtilsTest extends PHPUnit_Framework_TestCase {
     $this->assertSame(StringUtils::reverse("hello"),"olleh");
   }
   
+  public function testToUpperCaseShouting() {
+    $str = "arrggh!! hulk smash!!!";
+    $this->assertSame(StringUtils::toUpperCase($str),strtoupper($str));
+  }
   
-  
+  public function testToUpperCaseSomeSentence() {
+    $str = "the lazy dog jumped over the quite fox";
+    $this->assertSame(StringUtils::toUpperCase($str),strtoupper($str));    
+  }
 }

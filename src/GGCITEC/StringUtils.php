@@ -11,4 +11,12 @@ class StringUtils {
     return $rev;
   }
 
+  public static function toUpperCase($str) {
+    $pattern = '/[a-z]/';
+    $result = preg_replace_callback($pattern, function($matches) {
+      return strtoupper($matches[0]);
+    }, $str);
+    return $result;
+  }
+
 }
